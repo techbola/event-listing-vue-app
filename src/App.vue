@@ -2,7 +2,7 @@
   <div id="app">
     <NavBar />
     <BaseIcon />
-    <router-view />
+    <router-view :key="$route.fullPath" />
   </div>
 </template>
 
@@ -11,8 +11,8 @@ import NavBar from "@/components/NavBar.vue";
 
 export default {
   components: {
-    NavBar,
-  },
+    NavBar
+  }
 };
 </script>
 
