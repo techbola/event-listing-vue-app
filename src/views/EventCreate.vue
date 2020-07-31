@@ -18,22 +18,14 @@
       <div class="field">
         <label>Description</label>
         <br />
-        <input
-          type="text"
-          v-model="event.description"
-          placeholder="Event description"
-        />
+        <input type="text" v-model="event.description" placeholder="Event description" />
       </div>
 
       <h3>Where is your event?</h3>
       <div class="field">
         <label>Location</label>
         <br />
-        <input
-          type="text"
-          v-model="event.location"
-          placeholder="Event location"
-        />
+        <input type="text" v-model="event.location" placeholder="Event location" />
       </div>
 
       <h3>When is your event?</h3>
@@ -61,7 +53,7 @@ import Datepicker from "vuejs-datepicker";
 
 export default {
   components: {
-    Datepicker,
+    Datepicker
   },
   data() {
     const times = [];
@@ -71,26 +63,24 @@ export default {
     return {
       times,
       categories: this.$store.state.categories,
-      event: this.createFreshEventObject(),
+      event: this.createFreshEventObject()
     };
   },
   methods: {
     createEvent() {
       this.$store
-        .dispatch("createEvent", this.event)
+        .dispatch("event/createEvent", this.event)
         .then(() => {
           this.$router.push({
             name: "event-show",
-            params: { id: this.event.id },
+            params: { id: this.event.id }
           });
           this.event = this.createFreshEventObject();
         })
-        .catch(() => {
-          console.log("There was a problem creating your event");
-        });
+        .catch(() => {});
     },
     createFreshEventObject() {
-      const user = this.$store.state.user;
+      const user = this.$store.state.user.user;
       const id = Math.floor(Math.random() * 10000000);
 
       return {
@@ -103,10 +93,10 @@ export default {
         location: "",
         date: "",
         time: "",
-        attendees: [],
+        attendees: []
       };
-    },
-  },
+    }
+  }
 };
 </script>
 

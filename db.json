@@ -7,7 +7,10 @@
       "time": "10:00",
       "location": "Daytona Beach",
       "description": "Let's clean up this beach.",
-      "organizer": "Adam Jahr",
+      "organizer": {
+        "id": "abc123",
+        "name": "bola"
+      },
       "category": "sustainability",
       "attendees": [
         {
@@ -31,7 +34,10 @@
       "time": "10:00",
       "location": "Ikeja Lagos",
       "description": "Single file components.",
-      "organizer": "Adebola",
+      "organizer": {
+        "id": "abc123",
+        "name": "bola"
+      },
       "category": "developers",
       "attendees": [
         {
@@ -100,6 +106,42 @@
       "location": "lagos",
       "date": "2020-07-17T12:26:00.000Z",
       "time": "12:00",
+      "attendees": []
+    },
+    {
+      "id": 1165559,
+      "user": {
+        "id": "abc123",
+        "name": "Adebola"
+      },
+      "category": "housing",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adebola"
+      },
+      "title": "molestiae non non",
+      "description": "Consequatur minima necessitatibus non quo voluptatibus consequatur placeat possimus. Et fuga voluptas suscipit facere nobis. Expedita ut vel.   Eos delectus officia quia. Consequatur in ipsum occaecati. Numquam harum ut et sunt.   Iusto rerum laborum dolore non tempora aut. Quia consequuntur consequatur sed accusantium. Quis quia neque saepe numquam unde.",
+      "location": "Domenicton",
+      "date": "2020-08-01T22:20:00.000Z",
+      "time": "3:00",
+      "attendees": []
+    },
+    {
+      "id": 8286424,
+      "user": {
+        "id": "abc123",
+        "name": "Adebola"
+      },
+      "category": "housing",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adebola"
+      },
+      "title": "real estate business",
+      "description": "description of event here",
+      "location": "lagos",
+      "date": "2020-08-03T22:22:00.000Z",
+      "time": "9:00",
       "attendees": []
     }
   ]
