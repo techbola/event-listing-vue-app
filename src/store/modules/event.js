@@ -74,10 +74,13 @@ export const actions = {
     let event = getters.getEventById(event_id);
     if (event) {
       commit("SET_EVENT", event);
+      return event;
     } else {
+      // Ensure API promise gets returned, so then() will work where the action is being implemented
       return EventService.getEvent(event_id)
         .then((response) => {
           commit("SET_EVENT", response.data);
+          return response.data;
         })
         .catch((error) => {
           const notification = {
